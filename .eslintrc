@@ -1,0 +1,34 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "jsx-a11y/label-has-associated-control": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/react-in-jsx-scope": 0,
+    "import/extensions": 0,
+    "react/prop-types": 0,
+    "linebreak-style": 0,
+    "react/state-in-constructor": 0,
+    "import/prefer-default-export": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ]
+}
