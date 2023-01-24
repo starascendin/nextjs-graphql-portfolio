@@ -11,9 +11,16 @@ export default async function handler() {
   });
 
   const promptCompletionsQuery = gql`
-  query PromptCompletionsAll{
+  query PromptCompletionsAll {
     promptcompletions {
       id
+      outputCompletion
+      inputContentSourceChunked {
+        id
+        transcriptStartTime
+        contentChunkedTitle
+        contentChunkedText
+      }
     }
   }
   `

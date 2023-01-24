@@ -11,12 +11,12 @@ const IndexPage = async () => {
   return (
     <div className="grid place-items-center min-h-[calc(100vh-245px)]">
       <div>
-        <h1 className="prose text-center text-2xl md:text-5xl mt-8 mb-16">
-          TESTING
-        </h1>
         {promptcompletions && promptcompletions.map((promptcompletion) => {
             console.log("#promptcompletion", promptcompletion)
-            return <span>{promptcompletion.id}</span>
+            return (<div>
+              <pre>{promptcompletion.inputContentSourceChunked.contentChunkedTitle} {promptcompletion.inputContentSourceChunked.transcriptStartTime}</pre>
+              <pre>{promptcompletion.outputCompletion} </pre>
+            </div>)
           })}
 
 
